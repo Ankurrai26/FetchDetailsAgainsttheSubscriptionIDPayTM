@@ -28,8 +28,7 @@ import payTMPojoDeSerialization.Result;
 
 public class ClassToFetchDetails {
 
-	//public static String xsrf = "3672fd7e-02db-4281-940e-81f96f7840a5";
-	//public static String Cookie = "_ga=GA1.3.2050952619.1697098668; signalSDKVisitorId=d45d84a0-68d7-11ee-8f30-75336e1c52e7; ext_name=ojplmecpdpgccookcobabopnaifgidhf; _gcl_au=1.1.289037908.1697098672; _hjSessionUser_2137993=eyJpZCI6IjU5NDNkY2M4LTEyZTAtNWJmNC05ZjNiLTRjMzBhYmM0YmIxMyIsImNyZWF0ZWQiOjE2OTcwOTg3MDc2MjYsImV4aXN0aW5nIjp0cnVlfQ==; _gid=GA1.2.2143907395.1700462617; _gid=GA1.3.2143907395.1700462617; _hjIncludedInSessionSample_2137993=0; _hjSession_2137993=eyJpZCI6ImZjNTJkNTcwLTY1MTktNGNkNi05ZDJiLWU1ZDJmNWZhNDQ5OCIsImNyZWF0ZWQiOjE3MDA1NDIwODUxOTYsImluU2FtcGxlIjpmYWxzZSwic2Vzc2lvbml6ZXJCZXRhRW5hYmxlZCI6dHJ1ZX0=; _hjAbsoluteSessionInProgress=1; SESSION=c5d0c816-ed5e-41cc-ab19-0a7516d48735; XSRF-TOKEN=3672fd7e-02db-4281-940e-81f96f7840a5; UMP_SESSION=c5d0c816-ed5e-41cc-ab19-0a7516d48735; _gat=1; _dc_gtm_UA-48995472-3=1; _ga_LSKTYTR270=GS1.1.1700542085.17.1.1700542232.0.0.0; _ga=GA1.2.2050952619.1697098668; _gat_UA-48995472-3=1; _ga_Z4F7L25N51=GS1.2.1700542085.13.1.1700542233.59.0.0; _ga_Z4F7L25N51=GS1.3.1700542085.13.1.1700542233.59.0.0; _ga_NF9V3YTCLK=GS1.2.1700542086.14.1.1700542264.9.0.0";
+	
 	public static String URL = "https://dashboard.paytm.com";
 	public static String ResourcePath = "/api/v1/subscription/payment/list";
 	public static Map<Integer, Object[]> data = new TreeMap<Integer, Object[]>();
