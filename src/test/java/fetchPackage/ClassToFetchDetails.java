@@ -36,7 +36,7 @@ public class ClassToFetchDetails {
 	public static int keys = 0;
 
 	@BeforeTest
-	public static void runfetchexcel() {
+	public static void runfetchexcel() throws IOException {
 		FetchDetailsFromExcel.fetchsubscriptionidfromexcel();
 	}
 	//

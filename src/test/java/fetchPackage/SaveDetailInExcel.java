@@ -47,7 +47,7 @@ public class SaveDetailInExcel extends ClassToFetchDetails {
 		}
 
 		try {
-			FileOutputStream out = new FileOutputStream(new File("SubscripIDDetail_mandardate.xlsx"));
+			FileOutputStream out = new FileOutputStream(new File(Utility.fetchFromPropertiesFile("CreateExcelName")));
 			workbook.write(out);
 			out.close();
 

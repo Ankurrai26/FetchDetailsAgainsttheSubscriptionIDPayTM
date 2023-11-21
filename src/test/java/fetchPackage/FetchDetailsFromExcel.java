@@ -20,9 +20,9 @@ import org.testng.annotations.Test;
 
 public class FetchDetailsFromExcel {
 
-	public static ArrayList<String> fetchsubscriptionidfromexcel() {
+	public static ArrayList<String> fetchsubscriptionidfromexcel() throws IOException {
 		ArrayList<String> subid = new ArrayList<String>();
-		File file = new File("C:\\Users\\PolicyGuru\\Downloads\\Subcription_Id_mandar.xlsx");
+		File file = new File(Utility.fetchFromPropertiesFile("ExcelPath")); //Enter File Path here having single sheet with mutiple subscription id row wise
 
 		try {
 			FileInputStream file2 = new FileInputStream(file);
@@ -76,7 +76,7 @@ public class FetchDetailsFromExcel {
 	}
 
 	@DataProvider(name = "fetchSubsctiptionId")
-	public Object[] providesubscriptioid() {
+	public Object[] providesubscriptioid() throws IOException {
 
 		ArrayList<String> list = FetchDetailsFromExcel.fetchsubscriptionidfromexcel();
 
