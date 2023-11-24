@@ -28,7 +28,6 @@ import payTMPojoDeSerialization.Result;
 
 public class ClassToFetchDetails {
 
-	
 	public static String URL = "https://dashboard.paytm.com";
 	public static String ResourcePath = "/api/v1/subscription/payment/list";
 	public static Map<Integer, Object[]> data = new TreeMap<Integer, Object[]>();
@@ -43,15 +42,12 @@ public class ClassToFetchDetails {
 
 	@Test(dataProvider = "fetchSubsctiptionId", dataProviderClass = FetchDetailsFromExcel.class)
 	public static void fetchingPaymentDetails(String SubID) throws IOException {
-		String xsrf = Utility.fetchFromPropertiesFile("xsrf"); 
+		String xsrf = Utility.fetchFromPropertiesFile("xsrf");
 		String Cookie = Utility.fetchFromPropertiesFile("Cookie");
-		
-		
+
 		pr = new PrintStream(new FileOutputStream("Logging.text"), true);
 
 		ParentOfRequest pfr = new ParentOfRequest();
-
-		
 
 		ArrayList<String> statue = new ArrayList<String>();
 		statue.add("INIT");
@@ -82,8 +78,10 @@ public class ClassToFetchDetails {
 
 			Result result = resultdata.get(a);
 
-			data.put(keys, new Object[] { result.getSubsId(), result.getOrderId(), result.getTxnAmount(),result.getTimeStamp(),
-					result.getStatus() });
+			data.put(keys,
+					new Object[] { result.getSubsId(), result.getOrderId(), result.getTxnAmount(),result.getTxnId() ,result.getPayMode(),
+							result.getMid(), result.getCustomerMobileNo(), result.getCustomerEmailId(),
+							result.getTimeStamp(), result.getStatus() });
 
 			System.out.println("Data for iteration " + keys + ": " + Arrays.toString(data.get(keys)));
 			keys++;

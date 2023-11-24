@@ -30,16 +30,21 @@ public class SaveDetailInExcel extends ClassToFetchDetails {
 
 				Cell cell = row.createCell(colnum++);
 
-				if (obj instanceof String) {
-					cell.setCellValue((String) obj);
-				} else if (obj instanceof Double) {
-					cell.setCellValue((Double) obj);
-				} else if (obj instanceof Integer) {
-					cell.setCellValue((Integer) obj);
-				} else if (obj instanceof Long) {
-					cell.setCellValue((Long) obj);
+				if (obj != null) {
+				    if (obj instanceof String) {
+				        cell.setCellValue((String) obj);
+				    } else if (obj instanceof Double) {
+				        cell.setCellValue((Double) obj);
+				    } else if (obj instanceof Integer) {
+				        cell.setCellValue((Integer) obj);
+				    } else if (obj instanceof Long) {
+				        cell.setCellValue((Long) obj);
+				    } else {
+				        cell.setCellValue(obj.toString());
+				    }
 				} else {
-					cell.setCellValue(obj.toString());
+				   
+				    cell.setCellValue("");
 				}
 
 			}
