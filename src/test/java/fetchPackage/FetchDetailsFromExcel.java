@@ -22,7 +22,8 @@ public class FetchDetailsFromExcel {
 
 	public static ArrayList<String> fetchsubscriptionidfromexcel() throws IOException {
 		ArrayList<String> subid = new ArrayList<String>();
-		File file = new File(Utility.fetchFromPropertiesFile("ExcelPath")); //Enter File Path here having single sheet with mutiple subscription id row wise
+		File file = new File(Utility.fetchFromPropertiesFile("ExcelPath")); // Enter File Path here having single sheet
+																			// with mutiple subscription id row wise
 
 		try {
 			FileInputStream file2 = new FileInputStream(file);
